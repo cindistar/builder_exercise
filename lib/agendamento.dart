@@ -1,8 +1,7 @@
 import 'package:builder_exercise/barbeiros.dart';
-import 'package:builder_exercise/i_agendamento.dart';
 import 'package:builder_exercise/servicos.dart';
 
-class Agendamento implements IAgendamento {
+class Agendamento {
   final String nomeCliente;
   final String? telefone;
   final Barbeiros barbeiro;
@@ -16,9 +15,9 @@ class Agendamento implements IAgendamento {
     required this.servicos,
     required this.dataHora,
   });
-  
+
   @override
-  void buildAgendamento() {
-    // TODO: implement buildAgendamento
+  String toString() {
+    return 'Agendamento(nomeCliente: $nomeCliente, telefone: $telefone, barbeiro: $barbeiro, servicos: $servicos, dataHora: $dataHora)';
   }
 }
